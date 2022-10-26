@@ -1,0 +1,17 @@
+#!/bin/sh
+
+while [ 0 ]
+do
+	cpu=`awk '{print $2}' /proc/acpi/ibm/thermal`
+	mem=$(free -h | awk '/^Mem:/ {print $3 " | " $4}')
+	fan=$(awk 'FNR == 2 {print $2}' /proc/acpi/ibm/fan)	
+	wifi=$(awk '{if(l1){print ($2-l1)/1024"kB/s",($10-l2)/1024"kB/s"} else{l1=$2; l2=$10;}}' <(grep wlp3s0 /proc/net/dev) <(sleep 1; grep wlp3s0 /proc/net/dev))
+	eth=$(awk '{if(l1){print ($2-l1)/1024"kB/s",($10-l2)/1024"kB/s"} else{l1=$2; l2=$10;}}' <(grep enp2s0 /proc/net/dev) <(sleep 1; grep enp2s0 /proc/net/dev))
+
+	printf "CPU : %s°C\n" $cpu
+	printf "Memory : %s %s %s\n" $mem
+	printf "Fan : %s RPM\n" $fan
+	printf "WiFi : %s %s\n" $wifi
+	printf "Ethernet : %s %s\n" $eth
+	echo "---------------------"
+done
