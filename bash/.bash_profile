@@ -40,6 +40,6 @@ export PATH="${PATH}:${GOPATH}/bin"
 export QT_QPA_PLATFORMTHEME=qt5ct
 export XCURSOR_SIZE="$(gsettings get org.gnome.desktop.interface cursor-size)"
 
-# Added by Toolbox App
-export PATH="$PATH:/home/heymde/.local/share/JetBrains/Toolbox/scripts"
-
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/home/heymde/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

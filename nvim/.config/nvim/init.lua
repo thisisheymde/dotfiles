@@ -31,7 +31,7 @@ vim.opt.cmdheight = 1
 vim.opt.updatetime = 50
 
 -- colorscheme
-vim.cmd[[colorscheme catppuccin]]
+vim.cmd[[colorscheme nord]]
 
 -- lualine
 require('lualine').setup{

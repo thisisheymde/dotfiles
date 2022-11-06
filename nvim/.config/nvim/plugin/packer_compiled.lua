@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/heymde/.local/share/nvim/site/pack/packer/start/neogit",
     url = "https://github.com/TimUntersberger/neogit"
   },
+  ["nord-vim"] = {
+    loaded = true,
+    path = "/home/heymde/.local/share/nvim/site/pack/packer/start/nord-vim",
+    url = "https://github.com/arcticicestudio/nord-vim"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/heymde/.local/share/nvim/site/pack/packer/start/nvim-treesitter",

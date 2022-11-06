@@ -23,6 +23,7 @@ return require("packer").startup(function(use)
 
     -- colorscheme
     use({"catppuccin/nvim", as = "catppuccin" })
+    use("arcticicestudio/nord-vim")
     use("nvim-treesitter/nvim-treesitter", {
         run = ":TSUpdate"
     })
